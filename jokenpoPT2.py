@@ -3,16 +3,17 @@
 import random
 import time
 
-print("\33[30mDIGITE (1) PARA SIM E (2) PARA NÃO\33[m")
-perg = int(input("VC QUER ASSISTIR DUAS MAQUINAS JOGANDO JO KEN PO ? --> "))
+print('-'*50)
+perg = int(input("DIGITE (1) PARA VER DUAS MAQUINAS JOGANDO E (2) PARA VC JOGAR CONTRA A MAQUINA: "))
+print('-'*50)
 if perg == 1:
     lista = ['papel', 'tesoura', 'pedra']
     karen = random.choice(lista)
     jarvis = random.choice(lista)
     print("\33[34mJO")
-    time.sleep(1)
+    time.sleep(0.8)
     print("\33[32mKEN")
-    time.sleep(1)
+    time.sleep(0.8)
     print("\33[33mPO!!!\33[m")
     time.sleep(1)
     if jarvis == "papel" and karen == "tesoura":
@@ -45,16 +46,16 @@ elif perg == 2:
     print("\33[31m-=\33[m" * 10)
     player = int(input("Digite sua jogada --> ".upper()))
     jarvis = random.randint(1, 3)
-    time.sleep(2)
+    time.sleep(0.8)
     print("\33[31mJO")
-    time.sleep(1)
+    time.sleep(0.8)
     print("\33[33mKEN")
-    time.sleep(1)
+    time.sleep(0.8)
     print("\33[34mPO !!!\33[m")
-    time.sleep(1)
+    time.sleep(0.8)
     if jarvis == 1:  # Pedra
         print("\33[30mJARVIS JOGOU PEDRA")
-        time.sleep(2)
+        time.sleep(0.8)
         if player == jarvis:
             print("\33[33mHOUVE EMPATE...")
         elif player == 2:  # PAPEL
@@ -66,7 +67,7 @@ elif perg == 2:
             print("PEDRA GANHA DE TESOURA")
     if jarvis == 2:
         print("\33[30mJARVIS JOGOU PAPEL")
-        time.sleep(2)
+        time.sleep(0.8)
         if player == 1:
             print("\33[31mVC PERDEU !!!")
             print("PAPEL GANHA DE PEDRA")
@@ -77,7 +78,7 @@ elif perg == 2:
             print("TESOURA GANHA DE PAPEL")
     if jarvis == 3:
         print("\33[30mJARVIS JOGOU TESOURA")
-        time.sleep(2)
+        time.sleep(0.8)
         if player == 1:
             print("\33[32mVC GANHOU  ☻ !!!")
             print("PEDRA GANHA DE TESOURA")
@@ -86,8 +87,9 @@ elif perg == 2:
             print("TESOURA GANHA DE PAPEL")
         if player == 3:
             print("\33[33mHOUVE EMPATE...")
-    time.sleep(1.8)
+    time.sleep(0.8)
     print("\33[34mObg por jogar !!!")
+
 
 
 
